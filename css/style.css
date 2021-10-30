@@ -523,3 +523,16 @@ button:active {
   text-align: center;
   margin-left: 50px;
 }
+
+@media (max-width: 1024px) {
+  table,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+  th {
+    font-size: 2.5em;
+  }
+}
