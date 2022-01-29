@@ -547,7 +547,7 @@ button:active {
   }
 
   .icons {
-  width: 48px;
-  margin: auto
+  width: 24px;
+  margin-top: 20px;
 }
 }
