@@ -545,4 +545,9 @@ button:active {
   #subscribe {
     display: none;
   }
+
+  .icons {
+  width: 48px;
+  margin: auto
+}
 }
