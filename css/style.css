@@ -1,8 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 table {
@@ -31,6 +32,12 @@ th {
 
 #menu {
   background-color: black;
+}
+
+
+
+#hamburger {
+  display: none;
 }
 
 nav {
@@ -91,10 +98,6 @@ p {
 
 #subscribe {
   background-image: url(../images/misc/fernando-de-la-cruz-iufLRA5zr2I-unsplash.jpg);
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   padding: 5px;
 }
@@ -133,7 +136,10 @@ input:focus {
 
 button {
   margin: 10px 0 30px 0;
-  box-shadow: inset 0px 1px 0px 0px #f29c93;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #f29c93;
+          box-shadow: inset 0px 1px 0px 0px #f29c93;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #fe1a00), to(#ce0100));
+  background: -o-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
   background: linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
   background-color: #dc3d31;
   border-radius: 6px;
@@ -149,6 +155,8 @@ button {
   text-shadow: 0px 1px 0px #b23e35;
 }
 button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #ce0100), to(#fe1a00));
+  background: -o-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
   background: linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
   background-color: #ce0100;
 }
@@ -171,16 +179,33 @@ button:active {
   margin-left: 50px;
 }
 
+@media (min-width: 726px) {
+   label{
+display: none;
+   }
+   }
+
+
 @media (max-width: 726px) {
   /* (A) BREAK INTO VERTICAL MENU */
+
+  #menu nav ul li:not(:last-child) {
+    border-right: solid 0px #dc3d31;
+  }
+
+  label {
+    color: white;
+  }
+
+  #hamburger,
   #hamitems a {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     display: block;
     width: 100%;
     border-top: 1px solid #333;
     text-align: center;
   }
-
   /* (C) TOGGLE SHOW/HIDE MENU */
   #hamitems {
     display: none;
@@ -194,7 +219,7 @@ button:active {
   }
 
   .icons {
-  width: 24px;
-  margin-top: 20px;
-}
+    width: 24px;
+    margin-top: 20px;
+  }
 }
